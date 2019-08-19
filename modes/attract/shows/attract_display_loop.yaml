@@ -1,0 +1,46 @@
+#show_version=5
+
+- duration: 3s
+  slides:
+    press_start:
+      widgets:
+      - type: Text
+        text: PRESS START
+        font_size: 100
+        font_name: FRIZQT__
+        animations:
+          pre_show_slide:
+            - property: opacity
+              value: 0
+              duration: .5s
+            - property: opacity
+              value: 1
+              duration: .5s
+              repeat: -1
+      - type: Text
+        text: FREE PLAY
+        color: gold
+        font_name: FRIZQT__
+        y: 10
+        anchor_y: bottom
+      transition:
+         type: move_in
+         duration: 1s
+         direction: right
+
+- duration: 3
+  slides:
+    last_game_score_slide:
+      widgets:
+      - type: text
+        text: LAST GAME
+        font_size: 50
+        font_name: FRIZQT__
+        y: 60%
+      - type: text
+        text: (machine|player1_score)
+        number_grouping: true
+        min_digits: 2
+        font_size: 50
+        font_name: FRIZQT__
+        y: 40%

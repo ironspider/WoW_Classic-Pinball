@@ -1,0 +1,40 @@
+#config_version=5
+#pvp_lanes_watchdog mode config. This mode should always be running
+
+mode:
+  start_events: ball_starting
+  priority: 200
+
+shots:
+  shot_left_return_lane_left:
+    switches: s_left_return_lane_left
+    show_tokens:
+      leds: l_left_return_lane_left
+  shot_left_return_lane_right:
+    switches: s_left_return_lane_right
+    show_tokens:
+      leds: l_left_return_lane_right
+  shot_right_return_lane:
+    switches: s_right_return_lane
+    show_tokens:
+      leds: l_right_return_lane
+
+shot_groups:
+  sg_pvp_lanes:
+    shots: shot_left_return_lane_left, shot_left_return_lane_right, shot_right_return_lane
+    rotate_left_events: s_left_flipper_button_active
+    rotate_right_events: s_right_flipper_button_active
+    reset_events:
+      sg_pvp_lanes_lit_complete: 1s
+
+variable_player:
+  s_left_return_lane_left_active:
+    score: 50
+  s_left_return_lane_right_active:
+    score: 50
+  s_right_return_lane_active:
+    score: 50
+  sg_pvp_lanes_lit_complete:
+    pvp_lanes_completed:
+      int: 1
+      action: add

@@ -1,0 +1,50 @@
+#config_version=5
+#quest_targets_watchdog mode config. This mode should always be running
+
+mode:
+  start_events: ball_starting
+  priority: 200
+
+shots:
+  shot_quest_target_1:
+    switches: s_quest_target_1
+    show_tokens:
+      leds: l_quest_1
+  shot_quest_target_2:
+    switches: s_quest_target_2
+    show_tokens:
+      leds: l_quest_2
+  shot_quest_target_3:
+    switches: s_quest_target_3
+    show_tokens:
+      leds: l_quest_3
+  shot_quest_target_4:
+    switches: s_quest_target_4
+    show_tokens:
+      leds: l_quest_4
+  shot_quest_target_5:
+    switches: s_quest_target_5
+    show_tokens:
+      leds: l_quest_5
+
+shot_groups:
+  sg_quest_targets:
+    shots: shot_quest_target_1, shot_quest_target_2, shot_quest_target_3, shot_quest_target_4, shot_quest_target_5
+    reset_events:
+      sg_quest_targets_lit_complete: 1s
+
+variable_player:
+  s_quest_target_1_active:
+    score: 50
+  s_quest_target_2_active:
+    score: 50
+  s_quest_target_3_active:
+    score: 50
+  s_quest_target_4_active:
+    score: 50
+  s_quest_target_5_active:
+    score: 50
+  sg_quest_targets_lit_complete:
+    quest_targets_completed:
+      int: 1
+      action: add

@@ -1,0 +1,17 @@
+#show_version=5
+
+- duration: 3s
+  slides:
+    super_gold_started:
+      widgets:
+      - type: Text
+        text: SUPER GOLD
+        color: gold
+        font_size: 100
+        font_name: FRIZQT__
+        y: 50
+        anchor_y: bottom
+      transition:
+         type: move_in
+         duration: 1s
+         direction: right

@@ -1,0 +1,672 @@
+#config_version=5
+#This is the World of Warcraft pinball MPF config file basesd on Stern's GOTG Pro pin (Spike2)
+
+hardware:
+  platform: spike
+
+spike:
+  port: COM5
+  baud: 115200
+  flow_control: true
+  debug: false
+  nodes: 0, 1, 8, 9
+  runtime_baud: 115200
+
+ball_devices:
+  bd_trough:
+    ball_switches: s_trough_1, s_trough_2, s_trough_3, s_trough_4, s_trough_5, s_trough_6, s_trough_jam
+    eject_coil: c_trough_eject
+    tags: trough, home, drain
+    jam_switch: s_trough_jam
+    eject_coil_jam_pulse: 15ms
+    eject_targets: bd_plunger
+    debug: true
+  bd_plunger:
+    ball_switches: s_shooter_lane
+    eject_coil: c_auto_plunger
+    mechanical_eject: true
+    player_controlled_eject_event: s_lockdown_button_active
+    eject_timeouts: 3s
+  bd_scoop:
+    ball_switches: s_right_scoop
+    eject_coil: c_right_scoop
+    eject_timeouts: 1s
+  bd_arena_trough:
+    ball_switches: s_arena_trough_1, s_arena_trough_2, s_arena_trough_3, s_arena_trough_4
+    eject_coil: c_arena_trough_eject
+    eject_timeouts: 1s
+
+virtual_platform_start_active_switches:
+  s_trough_1
+  s_trough_2
+  s_trough_3
+  s_trough_4
+  s_trough_5
+  s_trough_6
+
+game:
+    balls_per_game: 3
+    max_players: 5
+
+machine:
+  balls_installed: 6
+  min_balls: 6
+
+playfields:
+  playfield:
+    tags: default
+    #enable_ball_search: true
+    default_source_device: bd_plunger
+
+displays:
+  window:
+    width: 800
+    height: 600
+
+player_vars: #these are the variables. Alter them in the individual modes
+  gold:
+    initial_value: 0
+    value_type: int
+  super_gold_active:
+    initial_value: 0
+    value_type: int
+  reputation:
+    initial_value: 0
+    value_type: int
+  rep_multiplier:
+    initial_value: 1.0 #need to somehow make this 1.1 for Alliance Humans
+    value_type: float
+  pvp_lanes_completed:
+    initial_value: 0
+    value_type: int
+  xp_lanes_completed:
+    initial_value: 0
+    value_type: int
+  quest_targets_completed:
+    initial_value: 0
+    value_type: int
+
+modes:
+  - base
+  - tilt
+  - super_gold
+  - super_gold_watchdog
+  - pvp_lanes_watchdog
+  - xp_lanes_watchdog
+  - quest_targets_watchdog
+
+keyboard:
+  z:
+    switch: s_left_flipper_button
+  "/":
+    switch: s_right_flipper_button
+  s:
+    switch: s_start_button
+  q:
+    switch: s_left_return_lane_left
+  w:
+    switch: s_left_return_lane_right
+  e:
+    switch: s_right_return_lane
+  r:
+    switch: s_bottom_pop_bumper
+  l:
+    switch: s_lockdown_button
+  1:
+    switch: s_trough_1
+  n:
+    event: super_gold_start
+  m:
+    event: super_gold_stop
+
+flippers:
+  left_flipper:
+    main_coil: c_left_flipper
+    activation_switch: s_left_flipper_button
+  right_flipper:
+    main_coil: c_right_flipper
+    activation_switch: s_right_flipper_button
+
+coils:
+  c_trough_eject:
+    number: 8-1
+    default_pulse_ms: 20
+  c_auto_plunger:
+    number: 8-4
+    default_pulse_ms: 20
+  c_left_flipper:
+    number: 8-5
+    allow_enable: true
+    default_hold_power: 0.125
+    default_pulse_ms: 20
+  c_right_flipper:
+    number: 8-0
+    allow_enable: true
+    default_hold_power: 0.125
+    default_pulse_ms: 20
+  c_left_slingshot:
+    number: 8-3
+  c_right_slingshot:
+    number: 8-2
+  c_shaker_motor:
+    number: 1-0
+  c_right_scoop:
+    number: 8-8
+  c_center_drop_target_down:
+    number: 8-7
+  c_center_drop_target_up:
+    number: 8-6
+  c_left_pop_bumper:
+    number: 9-2
+  c_right_pop_bumper:
+    number: 9-3
+  c_bottom_pop_bumper:
+    number: 9-4
+  c_orbit_control_gates:
+    number: 9-0
+  c_arena_trough_eject:
+    number: 9-1
+  c_top_magnet:
+    number: 9-6
+    default_pulse_ms: 100
+    default_hold_power: .375
+  c_kickback:
+    number: 9-8
+
+autofire_coils:
+  left_slingshot:
+    coil: c_left_slingshot
+    switch: s_left_slingshot
+  right_slingshot:
+    coil: c_right_slingshot
+    switch: s_right_slingshot
+  left_pop_bumper:
+    coil: c_left_pop_bumper
+    switch: s_left_pop_bumper
+  right_pop_bumper:
+    coil: c_right_pop_bumper
+    switch: s_right_pop_bumper
+  bottom_pop_bumper:
+    coil: c_bottom_pop_bumper
+    switch: s_bottom_pop_bumper
+  kickback:
+    coil: c_kickback
+    switch: s_kickback_opto
+
+drop_targets:
+  d_drop_target:
+    switch: s_center_drop_target
+    reset_coil: c_center_drop_target_up
+    knockdown_coil: c_center_drop_target_down
+
+magnets:
+  top_magnet:
+    magnet_coil: c_top_magnet
+    grab_switch: None #None is default
+    grab_time: 1.5s #1.5s is default
+    release_time: 500ms #500ms is default
+    fling_drop_time: 250ms #250ms is default
+    fling_regrab_time: 50ms #50ms is default
+    release_ball_events: top_magnet_release
+    fling_ball_events: top_magnet_fling
+
+#MOTOR SECTION. Jan is unsure what method GOTG uses.
+
+switches:
+  s_left_outlane:
+    number: 8-17
+    tags: playfield_active
+  s_left_return_lane_left:
+    number: 8-18
+    tags: playfield_active
+  s_left_return_lane_right:
+    number: 8-21
+    tags: playfield_active
+  s_right_return_lane:
+    number: 8-19
+    tags: playfield_active
+  s_right_outlane:
+    number: 8-20
+    tags: playfield_active
+  s_left_slingshot:
+    number: 8-30
+  s_right_slingshot:
+    number: 8-29
+  s_left_flipper_button:
+    number: 8-25
+    tags: left_flipper
+  s_right_flipper_button:
+    number: 8-24
+    tags: right_flipper
+  s_left_flipper_eos:
+    number: 8-16
+  s_right_flipper_eos:
+    number: 8-31
+  s_trough_6:
+    number: 8-32
+    type: NC
+  s_trough_5:
+    number: 8-33
+    type: NC
+  s_trough_4:
+    number: 8-34
+    type: NC
+  s_trough_3:
+    number: 8-35
+    type: NC
+  s_trough_2:
+    number: 8-36
+    type: NC
+  s_trough_1:
+    number: 8-37
+    type: NC
+  s_trough_jam:
+    number: 8-38
+    type: NC
+  s_shooter_lane:
+    number: 8-28
+  s_left_lane:
+    number: 9-26
+    tags: playfield_active
+  s_left_lane_target:
+    number: 9-27
+    tags: playfield_active
+  s_loot_target_top:
+    number: 9-20
+    tags: playfield_active
+  s_loot_target_bottom:
+    number: 9-21
+    tags: playfield_active
+  s_left_orbit:
+    number: 9-8
+    tags: playfield_active
+  s_kickback_opto:
+    number: 9-23
+    type: NC
+  s_left_ramp_exit:
+    number: 9-12
+    type: NC
+    tags: playfield_active
+  s_soulstone_target_left:
+    number: 9-10
+    tags: playfield_active
+  s_soulstone_target_right:
+    number: 9-11
+    tags: playfield_active
+  s_arena_opto:
+    number: 9-0
+    type: NC
+    tags: playfield_active
+  s_arena_trough_1:
+    number: 9-1
+    type: NC
+  s_arena_trough_2:
+    number: 9-2
+    type: NC
+  s_arena_trough_3:
+    number: 9-3
+    type: NC
+  s_arena_trough_4:
+    number: 9-4
+    type: NC
+  s_arena_motor_away:
+    number: 9-5
+  s_arena_motor_home:
+    number: 9-6
+  s_center_drop_target:
+    number: 8-9
+    type: NC
+  s_ah_standup_target:
+    number: 8-12
+    tags: playfield_active
+  s_right_orbit:
+    number: 9-9
+    tags: playfield_active
+  s_right_ramp_exit:
+    number: 9-13
+    type: NC
+    tags: playfield_active
+  s_left_pop_bumper:
+    number: 9-28
+    tags: jets
+  s_right_pop_bumper:
+    number: 9-29
+    tags: jets
+  s_bottom_pop_bumper:
+    number: 9-30
+    tags: jets
+  s_top_lane_left:
+    number: 9-31
+    tags: playfield_active
+  s_top_lane_right:
+    number: 9-16
+    tags: playfield_active
+  s_quest_target_1:
+    number: 9-17
+    tags: playfield_active
+  s_quest_target_2:
+    number: 9-18
+    tags: playfield_active
+  s_quest_target_3:
+    number: 9-19
+    tags: playfield_active
+  s_quest_target_4:
+    number: 8-14
+    tags: playfield_active
+  s_quest_target_5:
+    number: 8-15
+    tags: playfield_active
+  s_right_scoop:
+    number: 8-8
+  s_lockdown_button:
+    number: 1-2
+  s_start_button:
+    number: 1-11
+    tags: start
+  s_tournament_start_button:
+    number: 1-12
+  s_left_coin:
+    number: 1-16
+  s_right_coin:
+    number: 1-18
+  s_center_coin:
+    number: 1-17
+  s_tilt_pendulum:
+    number: 1-14
+    tags: tilt_warning
+  s_slam_tilt:
+    number: 1-22
+    tags: slam_tilt
+  s_service_plus:
+    number: 0-9
+  s_service_minus:
+    number: 0-10
+  s_service_back:
+    number: 0-11
+  s_service_select:
+    number: 0-8
+
+lights:
+  l_backlight:
+    number: 0-0
+  l_coin_enable:
+    number: 1-0
+  l_start_button:
+    number: 1-2
+  l_tourney_start_button:
+    number: 1-3
+  l_lockdown_bar:
+    channels:
+      red:
+        number: 1-5
+      green:
+        number: 1-4
+      blue:
+        number: 1-7
+  l_left_outlane:
+    number: 9-51
+  l_left_return_lane_left:
+    number: 9-52
+  l_left_return_lane_right:
+    number: 9-53
+  l_pvp_mode:
+    number: 8-20
+  l_gear_mode:
+    number: 8-21
+  l_craft_mode:
+    number: 8-23
+  l_rep_mode:
+    number: 8-16
+  l_gold_mode:
+    number: 8-19
+  l_quests_mode:
+    number: 8-18
+  l_level_mode:
+    number: 8-17
+  l_dungeon_mode:
+    number: 8-15
+  l_azeroth_mode:
+    number: 8-22
+  l_tavern_multiball:
+    number: 8-9
+  l_raid_mode:
+    number: 8-10
+  l_leeroy_multiball:
+    number: 8-13
+  l_shoot_again:
+    number: 8-11
+  l_right_return_lane:
+    number: 8-24
+  l_right_outlane:
+    number: 8-31
+  l_left_lane_arrow:
+    channels:
+      red:
+        number: 9-57
+      green:
+        number: 9-58
+      blue:
+        number: 9-59
+  l_left_lane_x:
+    number: 9-63
+  l_left_lane_rectangle:
+    number: 9-56
+  l_loot_left:
+    number: 9-37
+  l_loot_center:
+    number: 9-38
+  l_loot_right:
+    number: 9-39
+  l_left_orbit_arrow:
+    channels:
+      red:
+        number: 9-33
+      green:
+        number: 9-34
+      blue:
+        number: 9-35
+  l_left_orbit_x:
+    number: 9-36
+  l_left_orbit_rectangle:
+    number: 9-32
+  l_flight_arrow:
+    channels:
+      red:
+        number: 9-43
+      green:
+        number: 9-44
+      blue:
+        number: 9-45
+  l_flight_x:
+    number: 9-42
+  l_flight_rectangle:
+    number: 9-40
+  l_flight_multiball:
+    number: 9-47
+  l_left_ramp_arrow:
+    channels:
+      red:
+        number: 9-21
+      green:
+        number: 9-22
+      blue:
+        number: 9-23
+  l_left_ramp_x:
+    number: 9-24
+  l_left_ramp_rectangle:
+    number: 9-25
+  l_soulstone_target_left:
+    number: 9-20
+  l_soulstone_target_right:
+    number: 9-8
+  l_arena_ready:
+    number: 9-16
+  l_arena_arrow:
+    channels:
+      red:
+        number: 9-17
+      green:
+        number: 9-18
+      blue:
+        number: 9-19
+  l_arena_x:
+    number: 9-31
+  l_arena_rectangle:
+    number: 9-30
+  l_lock_1:
+    number: 9-26
+  l_lock_2:
+    number: 9-27
+  l_lock_3:
+    number: 9-28
+  l_lock_4:
+    number: 9-29
+  l_ah_arrow:
+    channels:
+      red:
+        number: 8-45
+      green:
+        number: 8-46
+      blue:
+        number: 8-47
+  l_ah_x:
+    number: 8-51
+  l_ah_rectangle:
+    number: 8-49
+  l_ah_multiball:
+    number: 8-48
+  l_right_ramp_arrow:
+    channels:
+      red:
+        number: 8-42
+      green:
+        number: 8-43
+      blue:
+        number: 8-44
+  l_right_ramp_x:
+    number: 8-52
+  l_right_ramp_rectangle:
+    number: 8-50
+  l_right_orbit_arrow:
+    channels:
+      red:
+        number: 8-37
+      green:
+        number: 8-38
+      blue:
+        number: 8-39
+  l_right_orbit_x:
+    number: 8-32
+  l_right_orbit_rectangle:
+    number: 8-40
+  l_right_scoop_arrow:
+    channels:
+      red:
+        number: 8-25
+      green:
+        number: 8-26
+      blue:
+        number: 8-27
+  l_right_scoop_x:
+    number: 8-30
+  l_right_scoop_rectangle:
+    number: 8-29
+  l_billboard_1:
+    number: 8-33
+  l_billboard_2:
+    number: 8-34
+  l_billboard_3:
+    number: 8-35
+  l_billboard_4:
+    number: 8-36
+  l_quest_1:
+    number: 9-55
+  l_quest_2:
+    number: 9-46
+  l_quest_3:
+    number: 9-41
+  l_quest_4:
+    number: 8-41
+  l_quest_5:
+    number: 8-28
+  l_left_pop_bumper:
+    number: 9-9
+  l_right_pop_bumper:
+    number: 9-10
+  l_bottom_pop_bumper:
+    number: 9-11
+  l_top_lane_left:
+    number: 9-12
+  l_top_lane_right:
+    number: 9-13
+  l_ah_RGB:
+    channels:
+      red:
+        number: 8-53
+      green:
+        number: 8-54
+      blue:
+        number: 8-55
+  l_tavern_flasher:
+    number: 8-5
+  l_left_ramp_top_flasher:
+    number: 9-3
+  l_left_ramp_bottom_flasher:
+    number: 8-3
+  l_right_ramp_top_flasher:
+    number: 9-4
+  l_right_ramp_bottom_flasher:
+    number: 8-4
+  l_pop_bumper_flasher:
+    number: 9-5
+  l_magnet_flasher:
+    number: 9-54
+  l_drop_target_flasher:
+    number: 9-6
+  l_coin_door_gi:
+    number: 1-1
+    #subtype: led #might be "matrix" instead of led but is this needed at all for GI?
+  l_top_gi_1:
+    number: 9-1
+    #subtype: led #might be "matrix" instead of led but is this needed at all for GI?
+  l_top_gi_2:
+    number: 9-2
+    #subtype: led #might be "matrix" instead of led but is this needed at all for GI?
+  l_bottom_gi_1:
+    number: 8-1
+    #subtype: led #might be "matrix" instead of led but is this needed at all for GI?
+  l_bottom_gi_2:
+    number: 8-2
+    #subtype: led #might be "matrix" instead of led but is this needed at all for GI?
+  l_backpanel_gi:
+    number: 9-0
+    #subtype: led #might be "matrix" instead of led but is this needed at all for GI?
+
+#TODO (things from reading that I will need to implement)
+#achievements and achievement groups (to track modes started/completed towards wizard mode)
+#ball_holds (holding a ball [not locking] while a show or video mode plays [possibly mystery award?])
+#ball_saves (for new ball save, unlimited drain timers, rez outlanes when lit)
+#ball_seasrch (may be automatic--need to include/configure?)
+#bonus mode (built in)
+#carousel (allows for player selection of modes and bonuses)
+#coins and credits (allows for coins and credits and has toggle for free play)
+#combo switches (allow for "flipper cancel", AFM skill shot passthru, and status reports)
+#extra_balls (awards and tracks "named" extra balls)
+#high_score (for entering high scores--can do mode scores and format it)
+#logic blocks (counters count events, accruals watch for events in any order, sequences watch for evetns in order)
+#counter logic can count AFM pop hits and then post an event to start a Super Jets mode
+#counter logic can count the hits needed on the AFM force field to lower it
+#counter along with a timer can be used to count combo shots
+#accrual can be used to track the 4 martian target hits during Martian Attack
+#seems like logic groups are superior to shots/show_groups (can do more)
+#accrual would be how you do an AFM super jackpot
+#there's a section after this about tying logic blocks to scoring and shows which is confusing
+#match mode (built in can do match)
+#multiballs (can be until 1 ball left or timed and have autosave timings. May need to adjust eject_timeouts)
+#timers can count up or count down. Events can alter their behavior
+#service mode is built in and can be customized
+#shots should be defined for things
+#shot_groups can do things like cycle the return lanes.
+#shot_profiles dictate how shots behave when hit
+#sequence_shots defien shots that need to be hit in order (is this inferior to logic blocks)
+#skill shots can be times based, hit some target before another target, super skill shot, lane-change skill shot

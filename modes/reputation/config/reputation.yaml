@@ -1,0 +1,17 @@
+#config_version=5
+#reputation mode config. This mode should always be running
+
+mode:
+  start_events: ball_started
+  priority: 15
+
+variable_player:
+  s_spinner_active:
+    spinner_rotations: 1
+    xp: 5
+
+#counters:
+#  spinner_rotations:
+#    count_events: s_spinner_active
+#    count_complete_value: 100
+#    events_when_finished: 
