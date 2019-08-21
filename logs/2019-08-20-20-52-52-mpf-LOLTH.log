@@ -1,0 +1,142 @@
+2019-08-20 20:52:52,420 : INFO : Machine : Mission Pinball Framework Core Engine v0.53.0-dev.52
+2019-08-20 20:52:52,420 : INFO : Machine : Command line arguments: {'no_load_cache': False, 'create_config_cache': True, 'bcp': True, 'configfile': ['config.yaml'], 'mpfconfigfile': 'c:\\program files\\python36\\lib\\site-packages\\mpf\\mpfconfig.yaml', 'force_assets_load': False, 'jsonlogging': False, 'logfile': 'logs\\2019-08-20-20-52-52-mpf-LOLTH.log', 'pause': False, 'production': False, 'text_ui': True, 'loglevel': 15, 'consoleloglevel': 20, 'force_platform': 'smart_virtual', 'syslog_address': None, 'mc_file_name': None, 'no_sound': False}
+2019-08-20 20:52:52,420 : INFO : Machine : MPF path: c:\program files\python36\lib\site-packages\mpf
+2019-08-20 20:52:52,420 : INFO : Machine : Machine path: C:\Users\jgbcross\Desktop\github\WoW_Classic-Pinball
+2019-08-20 20:52:52,420 : INFO : Machine : Platform: win32
+2019-08-20 20:52:52,420 : INFO : Machine : Python executable location: c:\program files\python36\python.exe
+2019-08-20 20:52:52,420 : INFO : Machine : Python version: 3.6.4 (64-bit)
+2019-08-20 20:52:52,420 : INFO : Machine : Machine config file #1: config.yaml
+2019-08-20 20:52:52,421 : WARNING : ConfigProcessor : Config file in cache changed: C:\Users\jgbcross\Desktop\github\WoW_Classic-Pinball\config\config.yaml
+2019-08-20 20:52:52,421 : INFO : ConfigProcessor : Loading config from file c:\program files\python36\lib\site-packages\mpf\mpfconfig.yaml.
+2019-08-20 20:52:52,482 : INFO : ConfigProcessor : Loading config: c:\program files\python36\lib\site-packages\mpf\mpfconfig.yaml
+2019-08-20 20:52:52,488 : INFO : ConfigProcessor : Loading config from file C:\Users\jgbcross\Desktop\github\WoW_Classic-Pinball\config\config.yaml.
+2019-08-20 20:52:52,581 : INFO : ConfigProcessor : Loading config: C:\Users\jgbcross\Desktop\github\WoW_Classic-Pinball\config\config.yaml
+2019-08-20 20:52:52,583 : INFO : ConfigProcessor : Config file cache created: C:\Users\jgbcross\AppData\Local\Temp\b888024debe8f75c3226150033d0b8f8.mpf_cache
+2019-08-20 20:52:52,584 : INFO : Machine : Initialise MPF.
+2019-08-20 20:52:52,724 : INFO : EventManager : Event: ======'machine_var_credits_string'====== Args={'value': 'FREE PLAY', 'prev_value': None, 'change': True}
+2019-08-20 20:52:52,749 : INFO : EventManager : Event: ======'machine_var_player1_score'====== Args={'value': 330, 'prev_value': None, 'change': True}
+2019-08-20 20:52:52,749 : INFO : EventManager : Event: ======'machine_var_mpf_version'====== Args={'value': 'MPF v0.53.0-dev.52', 'prev_value': None, 'change': True}
+2019-08-20 20:52:52,749 : INFO : EventManager : Event: ======'machine_var_mpf_extended_version'====== Args={'value': 'MPF v0.53.0-dev.52, Config version:5, Show version: 5, BCP version:1.1', 'prev_value': None, 'change': True}
+2019-08-20 20:52:52,749 : INFO : EventManager : Event: ======'machine_var_python_version'====== Args={'value': '3.6.4', 'prev_value': None, 'change': True}
+2019-08-20 20:52:52,749 : INFO : EventManager : Event: ======'machine_var_platform'====== Args={'value': 'Windows-10-10.0.18362-SP0', 'prev_value': None, 'change': True}
+2019-08-20 20:52:52,749 : INFO : EventManager : Event: ======'machine_var_platform_system'====== Args={'value': 'Windows', 'prev_value': None, 'change': True}
+2019-08-20 20:52:52,749 : INFO : EventManager : Event: ======'machine_var_platform_release'====== Args={'value': '10', 'prev_value': None, 'change': True}
+2019-08-20 20:52:52,749 : INFO : EventManager : Event: ======'machine_var_platform_version'====== Args={'value': '10.0.18362', 'prev_value': None, 'change': True}
+2019-08-20 20:52:52,749 : INFO : EventManager : Event: ======'machine_var_platform_machine'====== Args={'value': 'AMD64', 'prev_value': None, 'change': True}
+2019-08-20 20:52:52,749 : INFO : EventManager : Event: ======'init_phase_1'====== Args={}
+2019-08-20 20:52:52,771 : INFO : ConfigProcessor : Loading config from cache: C:\Users\jgbcross\AppData\Local\Temp\8e1a6a6e716428615d3205ffe45b9b4d.mpf_cache
+2019-08-20 20:52:52,775 : INFO : ConfigProcessor : Loading config from cache: C:\Users\jgbcross\AppData\Local\Temp\e140c0164a05ad5fcc304ee02ad77dad.mpf_cache
+2019-08-20 20:52:52,777 : INFO : ConfigProcessor : Loading config from cache: C:\Users\jgbcross\AppData\Local\Temp\c7ba1d60bed6701f21aa70c0b597f7ff.mpf_cache
+2019-08-20 20:52:52,779 : INFO : ConfigProcessor : Loading config from cache: C:\Users\jgbcross\AppData\Local\Temp\54ec261b09bad8c6580a7abaec866ef7.mpf_cache
+2019-08-20 20:52:52,782 : INFO : ConfigProcessor : Loading config from cache: C:\Users\jgbcross\AppData\Local\Temp\f59debb651560443703eed438ef87128.mpf_cache
+2019-08-20 20:52:52,785 : INFO : ConfigProcessor : Loading config from cache: C:\Users\jgbcross\AppData\Local\Temp\c309900c81551d04caee6839600d76c5.mpf_cache
+2019-08-20 20:52:52,787 : WARNING : ConfigProcessor : Config file in cache changed: C:\Users\jgbcross\Desktop\github\WoW_Classic-Pinball\modes\super_gold\config\super_gold.yaml
+2019-08-20 20:52:52,787 : INFO : ConfigProcessor : Loading config from file C:\Users\jgbcross\Desktop\github\WoW_Classic-Pinball\modes\super_gold\config\super_gold.yaml.
+2019-08-20 20:52:52,790 : INFO : ConfigProcessor : Loading config: C:\Users\jgbcross\Desktop\github\WoW_Classic-Pinball\modes\super_gold\config\super_gold.yaml
+2019-08-20 20:52:52,790 : INFO : ConfigProcessor : Config file cache created: C:\Users\jgbcross\AppData\Local\Temp\0d78f0fb76ce90413442c2b7a196c7da.mpf_cache
+2019-08-20 20:52:52,792 : WARNING : ConfigProcessor : Config file in cache changed: C:\Users\jgbcross\Desktop\github\WoW_Classic-Pinball\modes\super_gold_watchdog\config\super_gold_watchdog.yaml
+2019-08-20 20:52:52,792 : INFO : ConfigProcessor : Loading config from file C:\Users\jgbcross\Desktop\github\WoW_Classic-Pinball\modes\super_gold_watchdog\config\super_gold_watchdog.yaml.
+2019-08-20 20:52:52,797 : INFO : ConfigProcessor : Loading config: C:\Users\jgbcross\Desktop\github\WoW_Classic-Pinball\modes\super_gold_watchdog\config\super_gold_watchdog.yaml
+2019-08-20 20:52:52,798 : INFO : ConfigProcessor : Config file cache created: C:\Users\jgbcross\AppData\Local\Temp\773e72d6711483bbecf425ac3ab79443.mpf_cache
+2019-08-20 20:52:52,800 : INFO : ConfigProcessor : Loading config from cache: C:\Users\jgbcross\AppData\Local\Temp\3d1b8a74ec65a169731f17cfe06cf938.mpf_cache
+2019-08-20 20:52:52,837 : INFO : EventManager : Event: ======'init_phase_2'====== Args={}
+2019-08-20 20:52:52,838 : INFO : SwitchController : Found active switch: ('8-32', <Platform.SmartVirtual>)
+2019-08-20 20:52:52,838 : INFO : SwitchController : Found active switch: ('8-33', <Platform.SmartVirtual>)
+2019-08-20 20:52:52,838 : INFO : SwitchController : Found active switch: ('8-34', <Platform.SmartVirtual>)
+2019-08-20 20:52:52,838 : INFO : SwitchController : Found active switch: ('8-35', <Platform.SmartVirtual>)
+2019-08-20 20:52:52,838 : INFO : SwitchController : Found active switch: ('8-36', <Platform.SmartVirtual>)
+2019-08-20 20:52:52,838 : INFO : SwitchController : Found active switch: ('8-37', <Platform.SmartVirtual>)
+2019-08-20 20:52:52,846 : INFO : EventManager : Event: ======'bcp_connection_attempt'====== Args={'name': 'local_display', 'host': 'localhost', 'port': 5050}
+2019-08-20 20:52:52,847 : INFO : BCPClientSocket : Connecting BCP to 'local_display' at localhost:5050...
+2019-08-20 20:52:54,858 : INFO : BCPClientSocket : Connected BCP to 'local_display' localhost:5050
+2019-08-20 20:52:54,859 : INFO : EventManager : Event: ======'bcp_clients_connected'====== Args={}
+2019-08-20 20:52:54,859 : ERROR : asyncio : Exception in callback EventManager.process_event_queue()
+handle: <Handle EventManager.process_event_queue()>
+Traceback (most recent call last):
+  File "c:\program files\python36\lib\site-packages\mpf\core\events.py", line 664, in _run_handlers
+    result = handler.callback(**merged_kwargs)
+  File "c:\program files\python36\lib\site-packages\mpf\core\text_ui.py", line 437, in _bcp_connected
+    self.scene.remove_effect(self._pending_bcp_connection)
+  File "c:\program files\python36\lib\site-packages\asciimatics\scene.py", line 94, in remove_effect
+    self._effects.remove(effect)
+ValueError: list.remove(x): x not in list
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\program files\python36\lib\asyncio\events.py", line 145, in _run
+    self._callback(*self._args)
+  File "c:\program files\python36\lib\site-packages\mpf\core\events.py", line 745, in process_event_queue
+    **event[3])
+  File "c:\program files\python36\lib\site-packages\mpf\core\events.py", line 710, in _process_event
+    result = self._run_handlers(event, ev_type, kwargs)
+  File "c:\program files\python36\lib\site-packages\mpf\core\events.py", line 666, in _run_handlers
+    raise Exception("Exception while processing {} for event {}".format(handler, event)) from e
+Exception: Exception while processing RegisteredHandler(callback=<bound method TextUi._bcp_connected of <mpf.core.text_ui.TextUi object at 0x000002A9237E8A20>>, priority=1, kwargs={}, key=UUID('810538c9-346d-4f6c-b9a3-a6f513233b20'), condition=None, blocking_facility=None) for event bcp_clients_connected
+2019-08-20 20:52:54,886 : INFO : EventManager : Event: ======'machine_var_master_volume'====== Args={'value': 0.5, 'prev_value': None, 'change': True}
+2019-08-20 20:52:54,898 : INFO : Machine : Starting the main run loop.
+2019-08-20 20:52:54,899 : INFO : Machine : Shutting down...
+2019-08-20 20:52:54,900 : INFO : EventManager : Event: ======'shutdown'====== Args={}
+2019-08-20 20:52:54,917 : INFO : EventManager : Event: ======'init_phase_3'====== Args={}
+2019-08-20 20:52:54,917 : INFO : AssetManager : Registering Asset: attract_display_loop, File: attract_display_loop.yaml, Default Group: default, Final Config: {'load': 'preload', 'file': 'C:\\Users\\jgbcross\\Desktop\\github\\WoW_Classic-Pinball\\modes\\attract\\shows\\attract_display_loop.yaml'}
+2019-08-20 20:52:54,917 : INFO : AssetManager : Registering Asset: attract_light_show, File: attract_light_show.yaml, Default Group: default, Final Config: {'load': 'preload', 'file': 'C:\\Users\\jgbcross\\Desktop\\github\\WoW_Classic-Pinball\\modes\\attract\\shows\\attract_light_show.yaml'}
+2019-08-20 20:52:54,918 : INFO : AssetManager : Registering Asset: super_gold_acheived, File: super_gold_acheived.yaml, Default Group: default, Final Config: {'load': 'preload', 'file': 'C:\\Users\\jgbcross\\Desktop\\github\\WoW_Classic-Pinball\\modes\\super_gold\\shows\\super_gold_acheived.yaml'}
+2019-08-20 20:52:54,918 : INFO : AssetManager : Registering Asset: super_gold_started, File: super_gold_started.yaml, Default Group: default, Final Config: {'load': 'preload', 'file': 'C:\\Users\\jgbcross\\Desktop\\github\\WoW_Classic-Pinball\\modes\\super_gold\\shows\\super_gold_started.yaml'}
+2019-08-20 20:52:54,921 : INFO : ConfigProcessor : Loading config from cache: C:\Users\jgbcross\AppData\Local\Temp\49149998d6049df690f544dddbe8abef.mpf_cache
+2019-08-20 20:52:54,926 : INFO : EventManager : Event: ======'loading_assets'====== Args={'total': 4, 'loaded': 1, 'remaining': 3, 'percent': 25}
+2019-08-20 20:52:54,926 : INFO : AssetManager : Loading assets: 1/4 (25%)
+2019-08-20 20:52:54,926 : INFO : ConfigProcessor : Loading config from cache: C:\Users\jgbcross\AppData\Local\Temp\6b2572f3de420627f613d21597967d85.mpf_cache
+2019-08-20 20:52:54,927 : INFO : ConfigProcessor : Loading config from cache: C:\Users\jgbcross\AppData\Local\Temp\7ea283a0c9db94b9910e856d2b83198c.mpf_cache
+2019-08-20 20:52:54,928 : INFO : ConfigProcessor : Loading config from cache: C:\Users\jgbcross\AppData\Local\Temp\52d6b6454cac10b256882698b3caa8c9.mpf_cache
+2019-08-20 20:52:54,929 : INFO : EventManager : Event: ======'loading_assets'====== Args={'total': 4, 'loaded': 4, 'remaining': 0, 'percent': 100}
+2019-08-20 20:52:54,929 : INFO : EventManager : Event: ======'asset_loading_complete'====== Args={}
+2019-08-20 20:52:54,929 : INFO : AssetManager : Loading assets: 4/4 (100%)
+2019-08-20 20:52:54,929 : INFO : EventManager : Event: ======'init_phase_4'====== Args={}
+2019-08-20 20:52:54,930 : ERROR : asyncio : Exception in callback EventManager.process_event_queue()
+handle: <Handle EventManager.process_event_queue()>
+Traceback (most recent call last):
+  File "c:\program files\python36\lib\site-packages\mpf\core\events.py", line 664, in _run_handlers
+    result = handler.callback(**merged_kwargs)
+  File "c:\program files\python36\lib\site-packages\mpf\core\text_ui.py", line 444, in _asset_load_change
+    self._asset_percent = PopUpDialog(self.screen, 'LOADING ASSETS: {}%'.format(percent), [])
+  File "c:\program files\python36\lib\site-packages\asciimatics\widgets.py", line 3104, in __init__
+    string_len = wcswidth if screen.unicode_aware else len
+AttributeError: 'NoneType' object has no attribute 'unicode_aware'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\program files\python36\lib\asyncio\events.py", line 145, in _run
+    self._callback(*self._args)
+  File "c:\program files\python36\lib\site-packages\mpf\core\events.py", line 745, in process_event_queue
+    **event[3])
+  File "c:\program files\python36\lib\site-packages\mpf\core\events.py", line 710, in _process_event
+    result = self._run_handlers(event, ev_type, kwargs)
+  File "c:\program files\python36\lib\site-packages\mpf\core\events.py", line 666, in _run_handlers
+    raise Exception("Exception while processing {} for event {}".format(handler, event)) from e
+Exception: Exception while processing RegisteredHandler(callback=<bound method TextUi._asset_load_change of <mpf.core.text_ui.TextUi object at 0x000002A9237E8A20>>, priority=1, kwargs={}, key=UUID('8a8e2f3e-e709-4d0c-b56d-7046317cdd7e'), condition=None, blocking_facility=None) for event loading_assets
+2019-08-20 20:52:54,933 : ERROR : Machine : Runtime Exception
+Traceback (most recent call last):
+  File "c:\program files\python36\lib\site-packages\mpf\core\events.py", line 664, in _run_handlers
+    result = handler.callback(**merged_kwargs)
+  File "c:\program files\python36\lib\site-packages\mpf\core\text_ui.py", line 437, in _bcp_connected
+    self.scene.remove_effect(self._pending_bcp_connection)
+  File "c:\program files\python36\lib\site-packages\asciimatics\scene.py", line 94, in remove_effect
+    self._effects.remove(effect)
+ValueError: list.remove(x): x not in list
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\program files\python36\lib\site-packages\mpf\core\machine.py", line 757, in _run_loop
+    raise self._exception['exception']
+  File "c:\program files\python36\lib\asyncio\events.py", line 145, in _run
+    self._callback(*self._args)
+  File "c:\program files\python36\lib\site-packages\mpf\core\events.py", line 745, in process_event_queue
+    **event[3])
+  File "c:\program files\python36\lib\site-packages\mpf\core\events.py", line 710, in _process_event
+    result = self._run_handlers(event, ev_type, kwargs)
+  File "c:\program files\python36\lib\site-packages\mpf\core\events.py", line 666, in _run_handlers
+    raise Exception("Exception while processing {} for event {}".format(handler, event)) from e
+Exception: Exception while processing RegisteredHandler(callback=<bound method TextUi._bcp_connected of <mpf.core.text_ui.TextUi object at 0x000002A9237E8A20>>, priority=1, kwargs={}, key=UUID('810538c9-346d-4f6c-b9a3-a6f513233b20'), condition=None, blocking_facility=None) for event bcp_clients_connected
+2019-08-20 20:52:54,934 : INFO : root : MPF run loop ended.

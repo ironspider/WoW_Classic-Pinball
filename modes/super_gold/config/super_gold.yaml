@@ -7,11 +7,11 @@ mode:
   priority: 300
 
 variable_player:
-  s_left_pop_bumper_active:
-    gold: 30|block
-  s_right_pop_bumper_active:
-    gold: 30|block
-  s_bottom_pop_bumper_active:
+  mode_super_gold_started:
+    super_gold_acheived:
+      int: 1
+      action: set
+  bumpers_hit:
     gold: 30|block
 
 show_player:

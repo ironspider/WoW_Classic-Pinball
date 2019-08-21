@@ -1,6 +1,6 @@
 events:
   game_ended: 1
-  game_started: 8
+  game_started: 18
 player:
   score:
     average: 330.0
@@ -8,8 +8,8 @@ player:
     - 330
     total: 1
 shots:
-  bumpers: 61
-  shot_left_return_lane_left: 1
+  bumpers: 197
+  shot_left_return_lane_left: 4
   shot_left_return_lane_right: 2
   shot_quest_target_1: 5
   shot_quest_target_2: 3
@@ -27,7 +27,7 @@ switches:
   s_arena_trough_2: 0
   s_arena_trough_3: 0
   s_arena_trough_4: 0
-  s_bottom_pop_bumper: 59
+  s_bottom_pop_bumper: 80
   s_center_coin: 0
   s_center_drop_target: 0
   s_kickback_opto: 0
@@ -38,12 +38,12 @@ switches:
   s_left_lane_target: 0
   s_left_orbit: 0
   s_left_outlane: 0
-  s_left_pop_bumper: 2
+  s_left_pop_bumper: 58
   s_left_ramp_exit: 0
-  s_left_return_lane_left: 1
+  s_left_return_lane_left: 4
   s_left_return_lane_right: 2
   s_left_slingshot: 0
-  s_lockdown_button: 5
+  s_lockdown_button: 16
   s_loot_target_bottom: 0
   s_loot_target_top: 0
   s_quest_target_1: 5
@@ -56,7 +56,7 @@ switches:
   s_right_flipper_eos: 0
   s_right_orbit: 0
   s_right_outlane: 0
-  s_right_pop_bumper: 0
+  s_right_pop_bumper: 59
   s_right_ramp_exit: 0
   s_right_return_lane: 0
   s_right_scoop: 0
@@ -65,7 +65,7 @@ switches:
   s_service_minus: 0
   s_service_plus: 0
   s_service_select: 0
-  s_shooter_lane: 10
+  s_shooter_lane: 24
   s_slam_tilt: 0
   s_soulstone_target_left: 0
   s_soulstone_target_right: 0
@@ -74,7 +74,7 @@ switches:
   s_top_lane_left: 4
   s_top_lane_right: 7
   s_tournament_start_button: 0
-  s_trough_1: 4
+  s_trough_1: 8
   s_trough_2: 0
   s_trough_3: 0
   s_trough_4: 0
