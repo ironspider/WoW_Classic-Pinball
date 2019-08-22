@@ -1,0 +1,18 @@
+#config_version=5
+
+sound_system:
+  buffer: 2048
+  channels: 1
+  enabled: true
+  frequency: 22050
+  master_volume: 1
+  tracks:
+    voice:
+      volume: 0.8
+      simultaneous_sounds: 1
+    sfx:
+      volume: 0.6
+      simultaneous_sounds: 8
+    music:
+      volume: 0.5
+      simultaneous_sounds: 1

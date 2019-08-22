@@ -1,0 +1,175 @@
+#config_version=5
+
+switches:
+  s_left_outlane:
+    number: 8-17
+    tags: playfield_active
+  s_left_return_lane_left:
+    number: 8-18
+    tags: playfield_active
+  s_left_return_lane_right:
+    number: 8-21
+    tags: playfield_active
+  s_right_return_lane:
+    number: 8-19
+    tags: playfield_active
+  s_right_outlane:
+    number: 8-20
+    tags: playfield_active
+  s_left_slingshot:
+    number: 8-30
+  s_right_slingshot:
+    number: 8-29
+  s_left_flipper_button:
+    number: 8-25
+    tags: left_flipper
+  s_right_flipper_button:
+    number: 8-24
+    tags: right_flipper
+  s_left_flipper_eos:
+    number: 8-16
+  s_right_flipper_eos:
+    number: 8-31
+  s_trough_6:
+    number: 8-32
+    type: NC
+  s_trough_5:
+    number: 8-33
+    type: NC
+  s_trough_4:
+    number: 8-34
+    type: NC
+  s_trough_3:
+    number: 8-35
+    type: NC
+  s_trough_2:
+    number: 8-36
+    type: NC
+  s_trough_1:
+    number: 8-37
+    type: NC
+  s_trough_jam:
+    number: 8-38
+    type: NC
+  s_shooter_lane:
+    number: 8-28
+  s_left_lane:
+    number: 9-26
+    tags: playfield_active
+  s_left_lane_target:
+    number: 9-27
+    tags: playfield_active
+  s_loot_target_top:
+    number: 9-20
+    tags: playfield_active
+  s_loot_target_bottom:
+    number: 9-21
+    tags: playfield_active
+  s_left_orbit:
+    number: 9-8
+    tags: playfield_active
+  s_kickback_opto:
+    number: 9-23
+    type: NC
+  s_left_ramp_exit:
+    number: 9-12
+    type: NC
+    tags: playfield_active
+  s_soulstone_target_left:
+    number: 9-10
+    tags: playfield_active
+  s_soulstone_target_right:
+    number: 9-11
+    tags: playfield_active
+  s_arena_opto:
+    number: 9-0
+    type: NC
+    tags: playfield_active
+  s_arena_trough_1:
+    number: 9-1
+    type: NC
+  s_arena_trough_2:
+    number: 9-2
+    type: NC
+  s_arena_trough_3:
+    number: 9-3
+    type: NC
+  s_arena_trough_4:
+    number: 9-4
+    type: NC
+  s_arena_motor_away:
+    number: 9-5
+  s_arena_motor_home:
+    number: 9-6
+  s_center_drop_target:
+    number: 8-9
+    type: NC
+  s_ah_standup_target:
+    number: 8-12
+    tags: playfield_active
+  s_right_orbit:
+    number: 9-9
+    tags: playfield_active
+  s_right_ramp_exit:
+    number: 9-13
+    type: NC
+    tags: playfield_active
+  s_left_pop_bumper:
+    number: 9-28
+    tags: jets
+  s_right_pop_bumper:
+    number: 9-29
+    tags: jets
+  s_bottom_pop_bumper:
+    number: 9-30
+    tags: jets
+  s_top_lane_left:
+    number: 9-31
+    tags: playfield_active
+  s_top_lane_right:
+    number: 9-16
+    tags: playfield_active
+  s_quest_target_1:
+    number: 9-17
+    tags: playfield_active
+  s_quest_target_2:
+    number: 9-18
+    tags: playfield_active
+  s_quest_target_3:
+    number: 9-19
+    tags: playfield_active
+  s_quest_target_4:
+    number: 8-14
+    tags: playfield_active
+  s_quest_target_5:
+    number: 8-15
+    tags: playfield_active
+  s_right_scoop:
+    number: 8-8
+  s_lockdown_button:
+    number: 1-2
+  s_start_button:
+    number: 1-11
+    tags: start
+  s_tournament_start_button:
+    number: 1-12
+  s_left_coin:
+    number: 1-16
+  s_right_coin:
+    number: 1-18
+  s_center_coin:
+    number: 1-17
+  s_tilt_pendulum:
+    number: 1-14
+    tags: tilt_warning
+  s_slam_tilt:
+    number: 1-22
+    tags: slam_tilt
+  s_service_plus:
+    number: 0-9
+  s_service_minus:
+    number: 0-10
+  s_service_back:
+    number: 0-11
+  s_service_select:
+    number: 0-8

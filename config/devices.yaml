@@ -1,0 +1,72 @@
+#config_version=5
+
+autofire_coils:
+  left_slingshot:
+    coil: c_left_slingshot
+    switch: s_left_slingshot
+  right_slingshot:
+    coil: c_right_slingshot
+    switch: s_right_slingshot
+  left_pop_bumper:
+    coil: c_left_pop_bumper
+    switch: s_left_pop_bumper
+  right_pop_bumper:
+    coil: c_right_pop_bumper
+    switch: s_right_pop_bumper
+  bottom_pop_bumper:
+    coil: c_bottom_pop_bumper
+    switch: s_bottom_pop_bumper
+  kickback:
+    coil: c_kickback
+    switch: s_kickback_opto
+
+flippers:
+  left_flipper:
+    main_coil: c_left_flipper
+    activation_switch: s_left_flipper_button
+  right_flipper:
+    main_coil: c_right_flipper
+    activation_switch: s_right_flipper_button
+
+drop_targets:
+  d_drop_target:
+    switch: s_center_drop_target
+    reset_coil: c_center_drop_target_up
+    knockdown_coil: c_center_drop_target_down
+
+ball_devices:
+  bd_trough:
+    ball_switches: s_trough_1, s_trough_2, s_trough_3, s_trough_4, s_trough_5, s_trough_6, s_trough_jam
+    eject_coil: c_trough_eject
+    tags: trough, home, drain
+    jam_switch: s_trough_jam
+    eject_coil_jam_pulse: 15ms
+    eject_targets: bd_plunger
+    debug: true
+  bd_plunger:
+    ball_switches: s_shooter_lane
+    eject_coil: c_auto_plunger
+    mechanical_eject: true
+    player_controlled_eject_event: s_lockdown_button_active
+    eject_timeouts: 3s
+  bd_scoop:
+    ball_switches: s_right_scoop
+    eject_coil: c_right_scoop
+    eject_timeouts: 1s
+  bd_arena_trough:
+    ball_switches: s_arena_trough_1, s_arena_trough_2, s_arena_trough_3, s_arena_trough_4
+    eject_coil: c_arena_trough_eject
+    eject_timeouts: 1s
+
+magnets:
+  top_magnet:
+    magnet_coil: c_top_magnet
+    grab_switch: None #None is default
+    grab_time: 1.5s #1.5s is default
+    release_time: 500ms #500ms is default
+    fling_drop_time: 250ms #250ms is default
+    fling_regrab_time: 50ms #50ms is default
+    release_ball_events: top_magnet_release
+    fling_ball_events: top_magnet_fling
+
+#MOTOR SECTION. Jan is unsure what method GOTG uses.

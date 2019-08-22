@@ -1,0 +1,47 @@
+#config_version=5
+
+coils:
+  c_trough_eject:
+    number: 8-1
+    default_pulse_ms: 20
+  c_auto_plunger:
+    number: 8-4
+    default_pulse_ms: 20
+  c_left_flipper:
+    number: 8-5
+    allow_enable: true
+    default_hold_power: 0.125
+    default_pulse_ms: 20
+  c_right_flipper:
+    number: 8-0
+    allow_enable: true
+    default_hold_power: 0.125
+    default_pulse_ms: 20
+  c_left_slingshot:
+    number: 8-3
+  c_right_slingshot:
+    number: 8-2
+  c_shaker_motor:
+    number: 1-0
+  c_right_scoop:
+    number: 8-8
+  c_center_drop_target_down:
+    number: 8-7
+  c_center_drop_target_up:
+    number: 8-6
+  c_left_pop_bumper:
+    number: 9-2
+  c_right_pop_bumper:
+    number: 9-3
+  c_bottom_pop_bumper:
+    number: 9-4
+  c_orbit_control_gates:
+    number: 9-0
+  c_arena_trough_eject:
+    number: 9-1
+  c_top_magnet:
+    number: 9-6
+    default_pulse_ms: 100
+    default_hold_power: .375
+  c_kickback:
+    number: 9-8

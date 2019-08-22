@@ -1,0 +1,12 @@
+#config_version=5
+
+assets:
+  images:
+    default:
+      load: preload
+
+images:
+  WoW_Classic_01:
+    file: WoW_Classic_01.png
+  WoW_Classic_02:
+    file: WoW_Classic_02.png

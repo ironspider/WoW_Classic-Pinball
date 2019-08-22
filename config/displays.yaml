@@ -1,0 +1,17 @@
+#config_version=5
+
+displays:
+  lcd:
+    width: 1360
+    height: 768
+    default: True
+
+window:
+  width: 1360 
+  height: 768
+  #fullscreen: true
+  borderless: false
+  title: World_of_Warcraft
+  resizable: false
+  exit_on_escape: true
+  source_display: lcd
