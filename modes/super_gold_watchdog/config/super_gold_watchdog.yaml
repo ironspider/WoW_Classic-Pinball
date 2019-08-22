@@ -12,24 +12,19 @@ shots:
 counters:
   lb_bumpers_count:
     count_events: bumpers_hit
-    starting_count: 0
     count_complete_value: 10 #increase to 100 after done testing
-    count_interval: 1
-    direction: up
     persist_state: true #this keeps the count from ball to ball
     events_when_complete: super_gold_go
     debug: true
   lb_bumpers_resume:
-    enable_events: mode_base_started{current_player.super_gold_active>0} #this says to enable it if the current_player variable "super_gold_active" (set in machine config) is greater than 0
+    #this says to enable it if the current_player variable "super_gold_achieved"
+    #(set in machine config) is greater than 0
+    enable_events: mode_base_started{current_player.super_gold_achieved>0}
     count_events: bumpers_hit
-    starting_count: 0
     count_complete_value: 5 #increase to 25 to match AFM
-    count_interval: 1
-    direction: up
     persist_state: false #resets the count to 0 at ball end 
     events_when_complete: super_gold_resume_go
     debug: true
-    reset_on_complete: true
 
 event_player:
   super_gold_go:
@@ -38,22 +33,12 @@ event_player:
     start_mode_super_gold
 
 variable_player:
-  s_left_pop_bumper_active:
+  bumpers_hit:
     gold: 10
     score: 10
-  s_right_pop_bumper_active:
-    gold: 10
-    score: 10
-  s_bottom_pop_bumper_active:
-    gold: 10
-    score: 10
-  mode_super_gold_started:
-    super_gold_active:
-      int: 1
-      action: set
 
 show_player:
-  mode_super_gold_watchdog_started{current_player.super_gold_active>0}:
-    super_gold_acheived:
+  mode_super_gold_watchdog_started{current_player.super_gold_achieved>0}:
+    super_gold_achieved:
       show_tokens:
         lights: l_gold_mode

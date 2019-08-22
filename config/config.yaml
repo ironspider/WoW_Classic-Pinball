@@ -67,7 +67,7 @@ player_vars: #these are the variables. Alter them in the individual modes
   gold:
     initial_value: 0
     value_type: int
-  super_gold_active:
+  super_gold_achieved:
     initial_value: 0
     value_type: int
   reputation:
