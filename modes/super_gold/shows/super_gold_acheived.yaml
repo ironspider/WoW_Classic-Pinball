@@ -1,6 +1,0 @@
-#show_version=5
-#non-RGB lights are either off (0) or on (ff)
-
-- duration: -1
-  lights:
-    l_gold_mode: ff

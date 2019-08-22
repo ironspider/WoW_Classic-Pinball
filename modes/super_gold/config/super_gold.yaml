@@ -8,7 +8,7 @@ mode:
 
 variable_player:
   mode_super_gold_started:
-    super_gold_acheived:
+    super_gold_achieved:
       int: 1
       action: set
   bumpers_hit:
@@ -18,6 +18,6 @@ show_player:
   mode_super_gold_started:
     super_gold_started:
       loops: 0
-    super_gold_acheived:
+    super_gold_achieved:
       show_tokens:
         lights: l_gold_mode
