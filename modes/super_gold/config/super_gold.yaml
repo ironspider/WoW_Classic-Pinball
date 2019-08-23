@@ -11,7 +11,7 @@ variable_player:
       int: 1
       action: set
   bumpers_hit:
-    gold: 30 * current_player.xp_multiplier|block 
+    gold: 30 * current_player.gold_multiplier|block 
 
 show_player:
   mode_super_gold_started:

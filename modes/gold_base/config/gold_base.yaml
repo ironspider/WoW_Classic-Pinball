@@ -38,8 +38,8 @@ event_player:
 
 variable_player:
   bumpers_hit:
-    gold: 10 * current_player.xp_multiplier
-    score: 10 * current_player.gold_multiplier
+    gold: 10 * current_player.gold_multiplier
+    score: 10 * current_player.xp_multiplier
     bumpers_hit_total: 1
 
 show_player:
