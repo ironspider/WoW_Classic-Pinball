@@ -4,43 +4,48 @@
   slides:
     press_start:
       widgets:
-      - type: Text
+      - type: text
         text: PRESS START
-        font_size: 100
+        font_size: 72
+        color: white
         font_name: FRIZQT__
+        y: 20%
         animations:
           pre_show_slide:
             - property: opacity
               value: 0
-              duration: .5s
+              duration: .65s
             - property: opacity
               value: 1
-              duration: .5s
+              duration: .65s
               repeat: -1
-      - type: Text
+      - type: text
         text: FREE PLAY
+        font_size: 18
         color: gold
         font_name: FRIZQT__
-        y: 10
+        y: 5%
         anchor_y: bottom
-      transition:
-         type: move_in
-         duration: 1s
-         direction: right
+      - type: image
+        image: WoW_Classic_03
+#      transition:
+#         type: move_in
+#         duration: 1s
+#         direction: right
 
-- duration: 3
-  slides:
-    last_game_score_slide:
-      widgets:
-      - type: text
-        text: LAST GAME
-        font_size: 50
-        font_name: FRIZQT__
-        y: 60%
-      - type: text
-        text: (machine|player1_score)
-        number_grouping: true
-        min_digits: 2
-        font_size: 50
-        font_name: FRIZQT__
-        y: 40%
+#- duration: 3
+#  slides:
+#    last_game_score_slide:
+#      widgets:
+#      - type: text
+#        text: LAST GAME
+#        font_size: 50
+#        font_name: FRIZQT__
+#        y: 60%
+#      - type: text
+#        text: (machine|player1_score)
+#        number_grouping: true
+#        min_digits: 2
+#        font_size: 50
+#        font_name: FRIZQT__
+#        y: 40%

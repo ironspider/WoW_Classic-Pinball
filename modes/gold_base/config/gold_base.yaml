@@ -23,8 +23,6 @@ counters:
     events_when_complete: super_gold_go
     debug: true
   lb_bumpers_resume:
-    #this says to enable it if the current_player variable "super_gold_achieved"
-    #(set in machine config) is greater than 0
     enable_events: mode_base_started{current_player.super_gold_achieved>0}
     count_events: bumpers_hit
     count_complete_value: 5 #increase to 25 to match AFM
@@ -45,22 +43,19 @@ variable_player:
     bumpers_hit_total: 1
 
 show_player:
+  #could move this to some kind of wizard mode tracker mode?
   mode_gold_base_started{current_player.super_gold_achieved>0}:
     super_gold_achieved:
-      show_tokens:
-        lights: l_gold_mode
+      loops: 0
   s_left_pop_bumper_active:
     left_bumper_light:
       loops: 0
-      speed: 1
   s_right_pop_bumper_active:
     right_bumper_light:
       loops: 0
-      speed: 1
   s_bottom_pop_bumper_active:
     bottom_bumper_light:
       loops: 0
-      speed: 1
 
 sound_pools:
   bumpers_hit_sound_pool:
@@ -71,4 +66,3 @@ sound_pools:
       - iMoneyDialogClose
       - iMoneyDialogOpen
       - LootCoinSmall
-      - LootCoinLarge
