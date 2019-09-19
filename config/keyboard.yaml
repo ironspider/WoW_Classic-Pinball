@@ -1,0 +1,25 @@
+#config_version=5
+
+keyboard:
+  z:
+    switch: s_left_flipper_button
+  "/":
+    switch: s_right_flipper_button
+  s:
+    switch: s_start_button
+  q:
+    switch: s_left_return_lane_left
+  w:
+    switch: s_left_return_lane_right
+  e:
+    switch: s_right_return_lane
+  r:
+    switch: s_bottom_pop_bumper
+  l:
+    switch: s_lockdown_button
+  1:
+    switch: s_trough_1
+  n:
+    event: super_gold_start
+  m:
+    event: super_gold_stop

@@ -5,4 +5,4 @@ show_player:
     attract_display_loop:
       speed: 1
     attract_light_show:
-      speed: 2 #this means "play it 4 times faster"
+      speed: 2 #this means "play it 2 times faster"

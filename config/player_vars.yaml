@@ -1,0 +1,19 @@
+#config_version=5
+
+player_vars:
+  gold:
+    initial_value: 0
+  super_gold_achieved:
+    initial_value: 0
+  pvp_lanes_completed:
+    initial_value: 0
+  xp_lanes_completed:
+    initial_value: 0
+  quest_targets_completed:
+    initial_value: 0
+  gold_multiplier:
+    initial_value: 1
+  xp_multiplier:
+    initial_value: 1
+  bumpers_hit_total:
+    initial_value: 0

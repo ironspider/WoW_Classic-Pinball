@@ -1,0 +1,10 @@
+#config_version=5
+
+assets:
+  videos:
+    default:
+      load: preload
+
+videos:
+  airlock_king_one:
+    file: Airlock_Combination_1_King.mp4

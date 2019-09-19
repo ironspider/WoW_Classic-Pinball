@@ -1,10 +1,9 @@
 #config_version=5
 #super_gold mode config. Gives bonus gold for pop bumper hits
-#test #2 of local editing of super_gold branch
 
 mode:
-  start_events: super_gold_start, super_gold_restart, super_gold_go, super_gold_resume_go
-  priority: 300
+  start_events: start_mode_super_gold
+  priority: 501
 
 variable_player:
   mode_super_gold_started:
@@ -12,12 +11,14 @@ variable_player:
       int: 1
       action: set
   bumpers_hit:
-    gold: 30|block
+    gold: 30 * current_player.gold_multiplier|block 
 
 show_player:
   mode_super_gold_started:
     super_gold_started:
       loops: 0
     super_gold_achieved:
-      show_tokens:
-        lights: l_gold_mode
+      loops: 0
+  bumpers_hit:
+    bumper_flasher:
+      loops: 0
