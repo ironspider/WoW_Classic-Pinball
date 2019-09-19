@@ -1,5 +1,7 @@
 #config_version=5
 #This is the World of Warcraft pinball MPF config file basesd on Stern's GOTG Pro pin (Spike2)
+#Command to start MPF and MPF-MC with the smart virtual platform is "mpf both -X" issued from the machine folder
+#Command to start MPF Monitor is "mpf monitor" issued from the machine folder
 
 hardware:
   platform: spike
@@ -23,6 +25,7 @@ config:
   - images.yaml
   - virtual.yaml
   - keyboard.yaml
+  - player_vars.yaml
 
 game:
     balls_per_game: 3
@@ -37,32 +40,6 @@ playfields:
     tags: default
     #enable_ball_search: true
     default_source_device: bd_plunger
-
-player_vars:
-  gold:
-    initial_value: 0
-    value_type: int
-  super_gold_achieved:
-    initial_value: 0
-    value_type: int
-  pvp_lanes_completed:
-    initial_value: 0
-    value_type: int
-  xp_lanes_completed:
-    initial_value: 0
-    value_type: int
-  quest_targets_completed:
-    initial_value: 0
-    value_type: int
-  gold_multiplier:
-    initial_value: 1
-    value_type: int
-  xp_multiplier:
-    initial_value: 1
-    value_type: int
-  bumpers_hit_total:
-    initial_value: 0
-    value_type: int
 
 modes:
   - base
